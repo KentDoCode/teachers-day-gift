@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    margin: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: min(1em, 8%);
+    display: flex;
+    flex-direction: column;
+    color: #333;
+    background-color: rgb(225, 243, 255);
+    background-image: radial-gradient(circle, rgb(255, 113, 144), white);
+}
+
+h1 {
+    font-family: 'Caveat', cursive;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.photo-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.photo-item {
+    text-align: center;
+    padding: min(1em, 1%);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 8px 0, rgba(0, 0, 0, 0.25) 0 6px 12px 0;
+    border-radius: 5%;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+.photo-item img {
+    border-radius: 5%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+
+.message, .sub-photo-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.photo-sub-item > .wrapper {
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapper > q {
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+
+.message {
+  display: none;
+  background-color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: background-color 0.5s;
+}
+
+.message:hover {
+    background-color: pink;
+    cursor: pointer;
+}
+
+.message:active {
+    background-color: rgb(251, 150, 167);
+}
+
+
+/* Amain date */
+
+.checkbox-amian-date {
+    display: none;
+}
+
+#amian-date-checkbox-label:checked ~ #amian-date-label .message {
+    display: block;
+}
+
+
+.photo-item:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+.photo-item:active {
+    background-color: pink;
+}
+
+
+
+.checkbox-snowy-christmas {
+    display: none;
+}
+
+#snowy-christas-checkbox-label:checked ~ #snowy-label .message {
+    display: block;
+}
+
+
+.third-checkbox-label {
+    display: none;
+}
+
+#third-checkbox-label:checked ~ #third-label .message {
+    display: block;
+}
+
+.fourth-checkbox-label {
+    display: none;
+}
+
+#fourth-checkbox-label:checked ~ #fourth-label .message {
+    display: block;
+}
+
+
+
+@media(max-width: 1024px){
+    .photo-container {
+        grid-template-columns: repeat(3, 1fr);
+}
+}
+
+@media(max-width: 768px){
+    .photo-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px){
+    .photo-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
