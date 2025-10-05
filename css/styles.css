@@ -19,6 +19,7 @@ h1 {
     font-family: 'Caveat', cursive;
     font-size: 2.5rem;
     text-align: center;
+    padding: 20px 5px 5px 5px;
 }
 
 p {
@@ -29,7 +30,10 @@ p {
   text-align: center;
   max-width: 600px;
   margin: 20px auto;
+  padding-bottom: 40px;
 }
+
+
 
 .photo-container {
     display: grid;
@@ -71,6 +75,7 @@ p {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 10px;
 }
 
 .wrapper > q {
@@ -78,6 +83,9 @@ p {
     padding: 10px;
 }
 
+.wrapper-writer p {
+    margin: 0;
+}
 
 .message {
   display: none;
@@ -89,6 +97,9 @@ p {
   font-size: 1rem;
   line-height: 1.5;
   transition: background-color 0.5s;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: white transparent;
 }
 
 .message:hover {
@@ -101,7 +112,7 @@ p {
 }
 
 
-/* Amain date */
+
 
 .checkbox-amian-date {
     display: none;
@@ -132,6 +143,11 @@ p {
 }
 
 
+#snowy-label > .message {
+    padding-top: 80px;
+}   
+
+
 .third-checkbox-label {
     display: none;
 }
@@ -148,6 +164,42 @@ p {
     display: block;
 }
 
+#fourth-label > .message {
+    padding-top: 170px;
+    font-size: 1.1rem;
+}
+
+.fifth-checkbox-label {
+    display: none;
+}
+
+#fifth-checkbox-label:checked ~ #fifth-label .message {
+    display: block;
+}
+
+#fifth-label > .message {
+    padding-top: 70px;
+}
+
+.six-checkbox-label {
+    display: none;
+}
+
+#six-checkbox-label:checked ~ #six-label .message {
+    display: block;
+}
+
+.seven-checkbox-label {
+    display: none;
+}
+
+#seven-checkbox-label:checked ~ #seven-label .message {
+    display: block;
+}
+
+#seven-label > .message {
+    padding-top: 150px;
+}
 
 
 @media(max-width: 1024px){
